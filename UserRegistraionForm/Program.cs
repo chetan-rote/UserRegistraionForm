@@ -21,10 +21,10 @@ namespace UserRegistraionForm
         {
             Console.WriteLine("Hello Welcome to User registration form...!");
             Pattern pattern = new Pattern();
-            ///Reads Mobile number from user.
-            Console.WriteLine("Enter your mobile number.");
-            string mobileNumber = Console.ReadLine();            
-            Console.WriteLine(pattern.ValidateMobileNumber(mobileNumber));
+            ///Reads passsword from user.
+            Console.WriteLine("Enter Password");
+            string password = Console.ReadLine();            
+            Console.WriteLine(pattern.ValidatePassword(password));         
         }
     }
 }

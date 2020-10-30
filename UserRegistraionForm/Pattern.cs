@@ -7,16 +7,18 @@ namespace UserRegistraionForm
 {
     class Pattern
     {
-        ///Regex Pattern to validate Mobile No.
-        public string MOBILE_NUMBER = "^([0]{0,1}[+]{0,1}[91]{0,2})?[7-9][0-9]{9}$";
+
+        ///Regex Pattern to validate User Password.
+        ///Rule 1 minimum 8 Charactres.
+        public string PASSWORD = "^[0-9a-zA-Z._+-@#&*$]{8,}$";
         /// <summary>
-        /// Validates the mobile number with regex pattern.        
+        /// Validates the Password with regex pattern.        
         /// </summary>
-        /// <param name="mobileNumber">The Mobile Number.</param>
+        /// <param name="password">The Password.</param>
         /// <returns>True or false.</returns>
-        public bool ValidateMobileNumber(string mobileNumber)
+        public bool ValidatePassword(string password)
         {
-            return Regex.IsMatch(mobileNumber, MOBILE_NUMBER);
-        }
+            return Regex.IsMatch(password, PASSWORD);
+        }        
     }
 }
