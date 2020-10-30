@@ -41,7 +41,8 @@ namespace UserRegistraionForm
             return Regex.IsMatch(emailAddress, EMAIL_ADDRESS);
         }
         /// <summary>
-        /// Validates the mobile number with regex pattern.        
+        /// Validates the mobile number with regex pattern.
+        /// Indian 10 digit mobile numbers
         /// </summary>
         /// <param name="mobileNumber">The Mobile Number.</param>
         /// <returns>True or false.</returns>
