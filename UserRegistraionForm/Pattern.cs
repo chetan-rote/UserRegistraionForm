@@ -7,17 +7,17 @@ namespace UserRegistraionForm
 {
     class Pattern
     {
-        //Regex Pattern to validate First Name.
-        public string FIRST_NAME = "^[A-Z][a-zA-Z]{3,}";
+        //Regex Pattern to validate Last Name.
+        public string LAST_NAME = "^[A-Z]{1,}[a-zA-Z]{2,}$";
         /// <summary>
-        /// Validates the first name with regex pattern
+        /// Validates the last name with regex pattern
         /// First letter Capital and rest small.
         /// </summary>
-        /// <param name="firstName">The first name.</param>
+        /// <param name="lastName">The last name.</param>
         /// <returns>True or false.</returns>
-        public bool ValidateFirstName(string firstName)
+        public bool ValidateLastName(string lastName)
         {
-            return Regex.IsMatch(firstName, FIRST_NAME);
+            return Regex.IsMatch(lastName, LAST_NAME);
         }
     }
 }
