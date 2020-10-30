@@ -21,10 +21,10 @@ namespace UserRegistraionForm
         {
             Console.WriteLine("Hello Welcome to User registration form...!");
             Pattern pattern = new Pattern();
-            ///Reads Email address from user.
-            Console.WriteLine("Enter Email Address");
-            string emailAddress = Console.ReadLine();            
-            Console.WriteLine(pattern.ValidateEmailAddress(emailAddress));
+            ///Reads passsword from user.
+            Console.WriteLine("Enter Password");
+            string password = Console.ReadLine();            
+            Console.WriteLine(pattern.ValidatePassword(password));
         }
     }
 }
