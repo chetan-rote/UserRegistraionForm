@@ -6,20 +6,17 @@ using System.Text.RegularExpressions;
 namespace UserRegistraionForm
 {
     class Pattern
-    {        
-        //Regex Pattern to validate Email Id.
-        public string EMAIL_ADDRESS = "^[a-zA-Z0-9_+&*#$^!-]+(?:\\." +
-                                      "[a-zA-Z0-9_+&*-]+)*@" +
-                                      "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
-                                      "A-Z]{2,7}$";
+    {
+        ///Regex Pattern to validate Mobile No.
+        public string MOBILE_NUMBER = "^([0]{0,1}[+]{0,1}[91]{0,2})?[7-9][0-9]{9}$";
         /// <summary>
-        /// Validates the Email address with regex pattern.        
+        /// Validates the mobile number with regex pattern.        
         /// </summary>
-        /// <param name="emailAddress">The Email Address.</param>
+        /// <param name="mobileNumber">The Mobile Number.</param>
         /// <returns>True or false.</returns>
-        public bool ValidateEmailAddress(string emailAddress)
+        public bool ValidateMobileNumber(string mobileNumber)
         {
-            return Regex.IsMatch(emailAddress, EMAIL_ADDRESS);
+            return Regex.IsMatch(mobileNumber, MOBILE_NUMBER);
         }
     }
 }
