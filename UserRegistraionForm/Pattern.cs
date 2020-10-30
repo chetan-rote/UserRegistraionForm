@@ -6,18 +6,20 @@ using System.Text.RegularExpressions;
 namespace UserRegistraionForm
 {
     class Pattern
-    {
-        //Regex Pattern to validate Last Name.
-        public string LAST_NAME = "^[A-Z]{1,}[a-zA-Z]{2,}$";
+    {        
+        //Regex Pattern to validate Email Id.
+        public string EMAIL_ADDRESS = "^[a-zA-Z0-9_+&*#$^!-]+(?:\\." +
+                                      "[a-zA-Z0-9_+&*-]+)*@" +
+                                      "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
+                                      "A-Z]{2,7}$";
         /// <summary>
-        /// Validates the last name with regex pattern
-        /// First letter Capital and rest small.
+        /// Validates the Email address with regex pattern.        
         /// </summary>
-        /// <param name="lastName">The last name.</param>
+        /// <param name="emailAddress">The Email Address.</param>
         /// <returns>True or false.</returns>
-        public bool ValidateLastName(string lastName)
+        public bool ValidateEmailAddress(string emailAddress)
         {
-            return Regex.IsMatch(lastName, LAST_NAME);
+            return Regex.IsMatch(emailAddress, EMAIL_ADDRESS);
         }
     }
 }
