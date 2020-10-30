@@ -24,7 +24,7 @@ namespace UserRegistraionForm
             ///Reads passsword from user.
             Console.WriteLine("Enter Password");
             string password = Console.ReadLine();            
-            Console.WriteLine(pattern.ValidatePassword(password));
+            Console.WriteLine(pattern.ValidatePassword(password));         
         }
     }
 }
