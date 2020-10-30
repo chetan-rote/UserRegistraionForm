@@ -9,8 +9,8 @@ namespace UserRegistraionForm
     {
 
         ///Regex Pattern to validate User Password.
-        ///Rule 1 minimum 8 Charactres.
-        public string PASSWORD = "^[0-9a-zA-Z._+-@#&*$]{8,}$";
+        ///Rule 2 atleast 1 Upper case.
+        public string PASSWORD = "^(?=[A-Z])[0-9a-zA-Z._+-@#&*$]{8,}$";
         /// <summary>
         /// Validates the Password with regex pattern.        
         /// </summary>
