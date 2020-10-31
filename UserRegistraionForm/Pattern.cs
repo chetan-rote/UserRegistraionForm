@@ -27,9 +27,25 @@ namespace UserRegistraionForm
         /// </summary>
         /// <param name="userName">The user name.</param>
         /// <returns>True or false.</returns>
-            public bool ValidateUserName(string userName)
+        public bool ValidateUserName(string userName)
         {
-            return Regex.IsMatch(userName, USER_NAME);
+            try
+            {
+
+                if (Regex.IsMatch(userName, USER_NAME))
+                {
+                    return true;
+                }
+                else
+                {
+                    throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.INVALID_USER_NAME, "User Name is invalid.");
+                }
+            }
+            catch (UserRegistrationCustomException ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
         }
         /// <summary>
         /// Validates the Email address with regex pattern.        
@@ -38,7 +54,22 @@ namespace UserRegistraionForm
         /// <returns>True or false.</returns>
         public bool ValidateEmailAddress(string emailAddress)
         {
-            return Regex.IsMatch(emailAddress, EMAIL_ADDRESS);
+            try
+            {
+                if (Regex.IsMatch(emailAddress, EMAIL_ADDRESS))
+                {
+                    return true;
+                }
+                else
+                {
+                    throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.INVALID_EMAIL_ADDRESS, "Invalid Email address.");
+                }
+            }
+            catch(UserRegistrationCustomException ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
         }
         /// <summary>
         /// Validates the mobile number with regex pattern.
@@ -48,7 +79,22 @@ namespace UserRegistraionForm
         /// <returns>True or false.</returns>
         public bool ValidateMobileNumber(string mobileNumber)
         {
-            return Regex.IsMatch(mobileNumber, MOBILE_NUMBER);
+            try
+            {
+                if (Regex.IsMatch(mobileNumber, MOBILE_NUMBER))
+                {
+                    return true;
+                }
+                else
+                {
+                    throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.INVALID_MOBILE_NUMBER, "Invalid mobile Number.");
+                }
+            }
+            catch (UserRegistrationCustomException ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
         }
         /// <summary>
         /// Validates the Password with regex pattern.        
@@ -57,7 +103,22 @@ namespace UserRegistraionForm
         /// <returns>True or false.</returns>
         public bool ValidatePassword(string password)
         {
-            return Regex.IsMatch(password, PASSWORD);
-        }        
+            try
+            {
+                if (Regex.IsMatch(password, PASSWORD))
+                {
+                    return true;
+                }
+                else
+                {
+                    throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.INVALID_PASSWORD, "Invalid Password.");
+                }
+            }
+            catch (UserRegistrationCustomException ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+        }
     }
 }

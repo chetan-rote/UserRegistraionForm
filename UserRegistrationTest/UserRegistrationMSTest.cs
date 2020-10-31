@@ -3,7 +3,7 @@ using UserRegistraionForm;
 namespace UserRegistrationTest
 {
     [TestClass]
-    public class UnitTest1
+    public class UserRegistrationMSTest
     {
         /// <summary>
         /// Givens the correct user name should return true or false.
