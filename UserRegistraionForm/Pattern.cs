@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace UserRegistraionForm
 {
-    class Pattern
+    public class Pattern
     {
         ///Regex Pattern to validate User Name.
         public static string USER_NAME = "^[A-Z]{1}[a-zA-Z]{2,}";
@@ -27,7 +27,7 @@ namespace UserRegistraionForm
         /// </summary>
         /// <param name="userName">The user name.</param>
         /// <returns>True or false.</returns>
-        public bool ValidateUserName(string userName)
+            public bool ValidateUserName(string userName)
         {
             return Regex.IsMatch(userName, USER_NAME);
         }
